@@ -3,6 +3,8 @@
 @theme {
   /* Brand colors */
   --color-brand-dark-blue: #0a1d3d;
+  --color-brand-dark-blue-70: #546177;
+  --color-brand-dark-blue-20: #ced2d8;
   --color-brand-bright-blue: #1e5bff;
   --color-brand-bright-blue-dark: #1644bf;
   --color-brand-bright-blue-hover: #356bff;

@@ -1,15 +1,31 @@
 {
-  "name": "flowagent",
-  "private": true,
-  "version": "0.0.0",
+  "name": "flowagent-design-system",
+  "version": "0.1.0",
+  "private": false,
   "type": "module",
+  "main": "./dist/flowagent-design-system.umd.js",
+  "module": "./dist/flowagent-design-system.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/flowagent-design-system.es.js",
+      "require": "./dist/flowagent-design-system.umd.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
+    "build:all": "tsc -b && vite build && npm run build-storybook",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "publish:chromatic": "chromatic"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",
@@ -41,6 +57,11 @@
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.2",
     "vite": "^8.0.12",
+    "vite-plugin-dts": "^5.0.1",
     "vitest": "^4.1.7"
+  },
+  "peerDependencies": {
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
   }
 }

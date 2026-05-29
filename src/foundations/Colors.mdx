@@ -1,0 +1,93 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import { ColorSwatch } from "./ColorSwatch";
+
+<Meta title="Foundations/Colors" />
+
+export const brand = [
+  { name: "brand-dark-blue", className: "bg-brand-dark-blue", hex: "#0a1d3d" },
+  { name: "brand-bright-blue", className: "bg-brand-bright-blue", hex: "#1e5bff" },
+  { name: "brand-bright-blue-dark", className: "bg-brand-bright-blue-dark", hex: "#1644bf" },
+  { name: "brand-bright-blue-hover", className: "bg-brand-bright-blue-hover", hex: "#356bff" },
+  { name: "brand-bright-blue-50", className: "bg-brand-bright-blue-50", hex: "#e9efff" },
+];
+
+export const accent = [
+  { name: "brand-light-blue", className: "bg-brand-light-blue", hex: "#00c2f2" },
+  { name: "brand-bright-green", className: "bg-brand-bright-green", hex: "#14b26b" },
+];
+
+export const neutrals = [
+  { name: "neutral-white", className: "bg-neutral-white", hex: "#ffffff" },
+  { name: "neutral-50", className: "bg-neutral-50", hex: "#f3f6f9" },
+  { name: "neutral-100", className: "bg-neutral-100", hex: "#e9ecf1" },
+  { name: "neutral-200", className: "bg-neutral-200", hex: "#d5dae3" },
+  { name: "neutral-300", className: "bg-neutral-300", hex: "#b8c0cd" },
+  { name: "neutral-400", className: "bg-neutral-400", hex: "#94a0b2" },
+  { name: "neutral-500", className: "bg-neutral-500", hex: "#6c7a8f" },
+  { name: "neutral-600", className: "bg-neutral-600", hex: "#4e5a6e" },
+  { name: "neutral-700", className: "bg-neutral-700", hex: "#374252" },
+  { name: "neutral-800", className: "bg-neutral-800", hex: "#222b38" },
+  { name: "neutral-900", className: "bg-neutral-900", hex: "#0f141c" },
+];
+
+export const semantic = [
+  { name: "success", className: "bg-success", hex: "#16a34a" },
+  { name: "success-light", className: "bg-success-light", hex: "#dcfce7" },
+  { name: "warning", className: "bg-warning", hex: "#d97706" },
+  { name: "warning-light", className: "bg-warning-light", hex: "#fee5c7" },
+  { name: "error", className: "bg-error", hex: "#dc2626" },
+  { name: "error-light", className: "bg-error-light", hex: "#fee2e2" },
+  { name: "info", className: "bg-info", hex: "#1e5bff" },
+];
+
+<div className="font-sans">
+
+# Colors
+
+Every color token defined in `src/styles/tokens.css`. Each swatch shows the color, its
+token name, the Tailwind utility class (prefix with `bg-` / `text-` / `border-`), and the
+hex value. The swatch fill renders the literal hex so it always matches the token.
+
+## Brand
+
+The core blue identity. Use `brand-bright-blue` for primary actions; the darker and hover
+shades are reserved for interaction states.
+
+<div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+  {brand.map((c) => (
+    <ColorSwatch key={c.name} {...c} />
+  ))}
+</div>
+
+## Accent
+
+Secondary brand hues for highlights and illustration. Not for primary actions.
+
+<div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+  {accent.map((c) => (
+    <ColorSwatch key={c.name} {...c} />
+  ))}
+</div>
+
+## Neutrals
+
+Text, surfaces, and borders. `neutral-800`/`900` for primary text, `neutral-500` for
+secondary, `neutral-200`/`300` for borders, `neutral-50`/`100` for surfaces.
+
+<div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+  {neutrals.map((c) => (
+    <ColorSwatch key={c.name} {...c} />
+  ))}
+</div>
+
+## Semantic
+
+Status colors. Each pairs a bold tone with a `-light` background tone (except `info`).
+
+<div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+  {semantic.map((c) => (
+    <ColorSwatch key={c.name} {...c} />
+  ))}
+</div>
+
+</div>

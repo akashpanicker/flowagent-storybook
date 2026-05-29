@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand colors */
+  --color-brand-dark-blue: #0a1d3d;
+  --color-brand-bright-blue: #1e5bff;
+  --color-brand-bright-blue-dark: #1644bf;
+  --color-brand-bright-blue-hover: #356bff;
+  --color-brand-bright-blue-50: #e9efff;
+  --color-brand-light-blue: #00c2f2;
+  --color-brand-bright-green: #14b26b;
+
+  /* Neutrals */
+  --color-neutral-white: #ffffff;
+  --color-neutral-50: #f3f6f9;
+  --color-neutral-100: #e9ecf1;
+  --color-neutral-200: #d5dae3;
+  --color-neutral-300: #b8c0cd;
+  --color-neutral-400: #94a0b2;
+  --color-neutral-500: #6c7a8f;
+  --color-neutral-600: #4e5a6e;
+  --color-neutral-700: #374252;
+  --color-neutral-800: #222b38;
+  --color-neutral-900: #0f141c;
+
+  /* Semantic */
+  --color-success: #16a34a;
+  --color-success-light: #dcfce7;
+  --color-warning: #d97706;
+  --color-warning-light: #fee5c7;
+  --color-error: #dc2626;
+  --color-error-light: #fee2e2;
+  --color-info: #1e5bff;
+
+  /* Typography */
+  --font-sans: "Geist", system-ui, -apple-system, sans-serif;
+
+  --text-caption-11: 11px;
+  --text-caption-11--line-height: 16px;
+  --text-caption-12: 12px;
+  --text-caption-12--line-height: 16px;
+  --text-body-13: 13px;
+  --text-body-13--line-height: 18px;
+  --text-body-14: 14px;
+  --text-body-14--line-height: 20px;
+  --text-body-15: 15px;
+  --text-body-15--line-height: 22px;
+  --text-body-16: 16px;
+  --text-body-16--line-height: 24px;
+  --text-header-18: 18px;
+  --text-header-18--line-height: 26px;
+  --text-header-20: 20px;
+  --text-header-20--line-height: 28px;
+  --text-header-22: 22px;
+  --text-header-22--line-height: 30px;
+  --text-header-24: 24px;
+  --text-header-24--line-height: 32px;
+  --text-display-28: 28px;
+  --text-display-28--line-height: 36px;
+  --text-display-32: 32px;
+  --text-display-32--line-height: 40px;
+}

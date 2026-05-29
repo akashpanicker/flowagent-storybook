@@ -1,0 +1,93 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import { TypeSample } from "./TypeSample";
+
+<Meta title="Foundations/Typography" />
+
+export const caption = [
+  { label: "Caption / 11", className: "text-caption-11", size: 11, lineHeight: 16 },
+  { label: "Caption / 12", className: "text-caption-12", size: 12, lineHeight: 16 },
+];
+
+export const body = [
+  { label: "Body / 13", className: "text-body-13", size: 13, lineHeight: 18 },
+  { label: "Body / 14", className: "text-body-14", size: 14, lineHeight: 20 },
+  { label: "Body / 15", className: "text-body-15", size: 15, lineHeight: 22 },
+  { label: "Body / 16", className: "text-body-16", size: 16, lineHeight: 24 },
+];
+
+export const header = [
+  { label: "Header / 18", className: "text-header-18", size: 18, lineHeight: 26 },
+  { label: "Header / 20", className: "text-header-20", size: 20, lineHeight: 28 },
+  { label: "Header / 22", className: "text-header-22", size: 22, lineHeight: 30 },
+  { label: "Header / 24", className: "text-header-24", size: 24, lineHeight: 32 },
+];
+
+export const display = [
+  { label: "Display / 28", className: "text-display-28", size: 28, lineHeight: 36 },
+  { label: "Display / 32", className: "text-display-32", size: 32, lineHeight: 40 },
+];
+
+<div className="font-sans">
+
+# Typography
+
+The type scale from `src/styles/tokens.css`, set in **Geist** (`font-sans`). Each token
+defines a font size and a paired line height — values below come straight from the tokens.
+
+Weight is a **separate axis**: it isn't baked into the size tokens, so pick a size class
+(e.g. `text-body-14`) and combine it with a Tailwind weight utility (see the bottom of this
+page). For example a "Body / 14 / Semi Bold" style is `text-body-14 font-semibold`.
+
+## Caption
+
+Metadata, labels, and helper text.
+
+<div>
+  {caption.map((t) => (
+    <TypeSample key={t.className} {...t} />
+  ))}
+</div>
+
+## Body
+
+Default running text and UI copy. `body-14` and `body-16` are the workhorses.
+
+<div>
+  {body.map((t) => (
+    <TypeSample key={t.className} {...t} />
+  ))}
+</div>
+
+## Header
+
+Section and card titles.
+
+<div>
+  {header.map((t) => (
+    <TypeSample key={t.className} {...t} />
+  ))}
+</div>
+
+## Display
+
+Page-level and marketing headlines.
+
+<div>
+  {display.map((t) => (
+    <TypeSample key={t.className} {...t} />
+  ))}
+</div>
+
+## Weights
+
+Combine any size above with one of these. Geist ships these weights; values are Tailwind
+defaults (not tokens).
+
+<div className="flex flex-col gap-2 py-2 text-body-16">
+  <p className="font-normal text-neutral-900">font-normal · 400 — The quick brown fox</p>
+  <p className="font-medium text-neutral-900">font-medium · 500 — The quick brown fox</p>
+  <p className="font-semibold text-neutral-900">font-semibold · 600 — The quick brown fox</p>
+  <p className="font-bold text-neutral-900">font-bold · 700 — The quick brown fox</p>
+</div>
+
+</div>

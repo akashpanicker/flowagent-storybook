@@ -1,0 +1,30 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import { RadiusTile } from "./RadiusTile";
+
+<Meta title="Foundations/Radius" />
+
+export const scale = [
+  { name: "rounded-xs", px: "2px", radius: "2px" },
+  { name: "rounded-sm", px: "4px", radius: "4px" },
+  { name: "rounded-md", px: "6px", radius: "6px" },
+  { name: "rounded-lg", px: "8px", radius: "8px" },
+  { name: "rounded-xl", px: "12px", radius: "12px" },
+  { name: "rounded-2xl", px: "16px", radius: "16px" },
+  { name: "rounded-3xl", px: "24px", radius: "24px" },
+  { name: "rounded-full", px: "9999px", radius: "9999px" },
+];
+
+<div className="font-sans">
+
+# Radius
+
+`tokens.css` defines no custom radius tokens, so border radius uses **Tailwind's default
+scale**. Buttons use `rounded-lg` (8px); badges use `rounded-full` for the pill shape.
+
+<div className="flex flex-wrap gap-6 py-2">
+  {scale.map((r) => (
+    <RadiusTile key={r.name} {...r} />
+  ))}
+</div>
+
+</div>
